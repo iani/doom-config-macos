@@ -187,3 +187,18 @@
        :config
        ;;literate
        (default +bindings +smartparens))
+
+(let ((user-packages (concat doom-private-dir "user-packages/*"))
+      (postload (concat doom-private-dir "postload/*.el")))
+  (message "looking for user packages in: %s" user-packages)
+  (message "found: %s" (file-expand-wildcards user-packages))
+  (message "looking for postload items in: %s" postload)
+  (message "found: %s" (file-expand-wildcards postload))
+  (mapcar (lambda (path)
+            (add-to-list 'load-path (concat path "/")))
+          (file-expand-wildcards user-packages))
+  (mapcar (lambda (path)
+            (message "loading: %s" path)
+            (load-file path))
+          (file-expand-wildcards postload))
+  )
