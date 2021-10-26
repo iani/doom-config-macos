@@ -48,6 +48,14 @@
   ":"
   (getenv "PATH")))
 
+(setq exec-path
+      (append
+       exec-path
+       '(
+         "/Library/TeX/texbin" ;; latex
+         "/Applications/SuperCollider/SuperCollider.app/Contents/MacOS" ;; sclang
+         "/Applications/SuperCollider/SuperCollider.app/Contents/Resources" ;; scsynth
+         )))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
