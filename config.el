@@ -75,6 +75,7 @@
 ;; they are implemented.
 
 (setq org-roam-directory "~/roam")
+(setq org-roam-graph-viewer "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 (setq org-agenda-files '("~/org" "~/roam" "~/roam/daily"))
 (setq org-agenda-include-diary t)
 (setq diary-file "~/roam/etc/diary")
