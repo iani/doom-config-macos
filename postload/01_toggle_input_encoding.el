@@ -13,6 +13,11 @@
 (defun toggle-encoding ()
   "Toggle encoding between greek and ucs."
   (interactive)
+  ;; (message "The encoding is: %s" current-input-method)
   (if (equal current-input-method "greek")
       (set-input-method 'ucs)
     (set-input-method 'greek)))
+
+
+(global-set-key (kbd "C-c C-\\") 'toggle-encoding)
+(global-set-key (kbd "C-M-s-\\") 'toggle-encoding)
