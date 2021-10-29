@@ -74,6 +74,35 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+
+;; extra package configs
+(use-package! projectile
+  :init
+  (setq projectile-switch-project-action #'projectile-commander))
+
+(use-package! org-super-agenda
+  :after org-agenda
+  :init
+  (setq
+         org-super-agenda-group-property-name
+         "ProjectId"
+         org-super-agenda-groups
+         '(
+           (:auto-group t);
+           (:name "Today" :time-grid t :scheduled today)
+           (:name "Due today" :deadline today)
+           (:name "Important" :priority "A")
+           (:name "Overdue" :deadline past)
+           (:name "Due soon" :deadline future)))
+  :config
+  (org-super-agenda-mode))
+
+(use-package! undo-tree
+  :config
+  (global-undo-tree-mode))
+
+;; Special work directory configs
+
 (setq org-roam-directory "~/roam")
 (setq org-roam-graph-viewer "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 (setq org-agenda-files '("~/org" "~/roam" "~/roam/daily"))
