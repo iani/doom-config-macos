@@ -41,6 +41,16 @@
   (interactive)
   (sclang-eval-string "Server.default.plotTree"))
 
+(defun sclang-server-record ()
+  "Start recording Server.default"
+  (interactive)
+  (sclang-eval-string "Server.default.meter"))
+
+(defun sclang-server-stop-recording ()
+  "Stop recording Server.default"
+  (interactive)
+  (sclang-eval-string "Server.default.meter"))
+
 (defun sclang-server-meter ()
   "Open i/o meter for default server."
   (interactive)

@@ -79,22 +79,23 @@
   :init
   (setq projectile-switch-project-action #'projectile-commander))
 
-(use-package! org-super-agenda
-  :after org-agenda
-  :init
-  (setq
-         org-super-agenda-group-property-name
-         "ProjectId"
-         org-super-agenda-groups
-         '(
-           (:auto-group t);
-           (:name "Today" :time-grid t :scheduled today)
-           (:name "Due today" :deadline today)
-           (:name "Important" :priority "A")
-           (:name "Overdue" :deadline past)
-           (:name "Due soon" :deadline future)))
-  :config
-  (org-super-agenda-mode))
+;; (use-package! counsel-projectile)
+;; (use-package! org-super-agenda
+;;   :after org-agenda
+;;   :init
+;;   (setq
+;;          org-super-agenda-group-property-name
+;;          "ProjectId"
+;;          org-super-agenda-groups
+;;          '(
+;;            (:auto-group t);
+;;            (:name "Today" :time-grid t :scheduled today)
+;;            (:name "Due today" :deadline today)
+;;            (:name "Important" :priority "A")
+;;            (:name "Overdue" :deadline past)
+;;            (:name "Due soon" :deadline future)))
+;;   :config
+;;   (org-super-agenda-mode))
 
 (use-package! undo-tree
   :config
@@ -127,6 +128,9 @@
        :desc "start jack" "j" #'sclang-start-jack
        :desc "server meter" "m" #'sclang-meter
        :desc "server tree" "t" #'sclang-server-plot-tree
+       :desc "record" "r" #'sclang-server-record
+       :desc "stop recording" "R" #'sclang-server-stop-recording
+       :desc "stop recording" "f" #'sclang-server-stop-recording
        :desc "server scope audio" "s a" #'sclang-scope-audio
        :desc "server scope control" "s c" #'sclang-scope-audio
        :desc "quit server" "q" #'sclang-server-quit
@@ -135,7 +139,10 @@
        :desc "switch to workspace" "w" #'sclang-switch-to-workspace
        :desc "osc trace on" "t" #'sclang-osc-trace-on
        :desc "osc trace off" "T" #'sclang-osc-trace-off
-       :desc "show post buffer" "p" #'sclang-show-post-buffer
+       :desc "show post buffer" "p" #'sclang-show-post-buffe//:  9 Nov 2021 00:27
+/*
+
+*/r
        :desc "recompile library" "l" #'sclang-recompile
        :desc "start sclang" "s" #'sclang-start
        :desc "stop sclang" "q" #'sclang-stop
