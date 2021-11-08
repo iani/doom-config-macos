@@ -139,10 +139,7 @@
        :desc "switch to workspace" "w" #'sclang-switch-to-workspace
        :desc "osc trace on" "t" #'sclang-osc-trace-on
        :desc "osc trace off" "T" #'sclang-osc-trace-off
-       :desc "show post buffer" "p" #'sclang-show-post-buffe//:  9 Nov 2021 00:27
-/*
-
-*/r
+       :desc "show post buffer" "p" #'sclang-show-post-buffer
        :desc "recompile library" "l" #'sclang-recompile
        :desc "start sclang" "s" #'sclang-start
        :desc "stop sclang" "q" #'sclang-stop
