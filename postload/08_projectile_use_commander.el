@@ -4,4 +4,5 @@
 (defun projectile-use-commander ()
   "Use commander when switching project."
   (interactive)
-  (setq projectile-switch-project-action #'projectile-commander))
+  (setq projectile-switch-project-action #'projectile-commander)
+  (message "Activated projectile commander"))
