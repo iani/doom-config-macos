@@ -140,6 +140,19 @@
        :desc "quit server" "q" #'sclang-server-quit
        :desc "reset server options" "o" #'sclang-reset-server-options)
       (:prefix-map ("j" . "sclang")
+       (:prefix ("y" . "scsynth")
+        ;;; TODO : replace org-journal-new-entry with real commands
+       :desc "boot server" "b" #'sclang-server-boot
+       :desc "start jack" "j" #'sclang-start-jack
+       :desc "server meter" "m" #'sclang-meter
+       :desc "server tree" "t" #'sclang-server-plot-tree
+       :desc "record" "r" #'sclang-server-record
+       :desc "stop recording" "R" #'sclang-server-stop-recording
+       :desc "stop recording" "f" #'sclang-server-stop-recording
+       :desc "server scope audio" "s a" #'sclang-scope-audio
+       :desc "server scope control" "s c" #'sclang-scope-audio
+       :desc "quit server" "q" #'sclang-server-quit
+       :desc "reset server options" "o" #'sclang-reset-server-options)
        :desc "switch to workspace" "w" #'sclang-switch-to-workspace
        :desc "osc trace on" "t" #'sclang-osc-trace-on
        :desc "osc trace off" "T" #'sclang-osc-trace-off
@@ -148,8 +161,8 @@
        :desc "start sclang" "s" #'sclang-start
        :desc "stop sclang" "q" #'sclang-stop
        :desc "run server config scripts" "c" #'sclang-server-config
-       :desc "browse builtin classes" "b" #'sclang-browse-definitions
-       :desc "browse user extension classes" "e" #'sclang-extensions-gui)
+       :desc "browse builtin classes" "B" #'sclang-browse-definitions
+       :desc "browse user extension classes" "E" #'sclang-extensions-gui)
       (:prefix-map ("l" . "latex")
        (:prefix ("b" . "buffer")
         ;;; TODO : replace org-journal-new-entry with real commands
