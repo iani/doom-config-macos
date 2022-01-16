@@ -118,7 +118,7 @@
       :desc "org-mark-ring-goto" "m g o" #'org-mark-ring-goto
       :desc "calendar" "o c" #'calendar
       :desc "calendar" "o C" #'calc
-      :desc "find folder in project" "p F" #'projectile-find-dir
+      ; :desc "find folder in project" "p F" #'projectile-find-dir
       :desc "org mark element" "o m" #'org-mark-element
       ;; (:prefix-map ("e" . "input encoding")
        :desc "toggle input encoding method" "e" #'toggle-encoding
@@ -139,9 +139,24 @@
        :desc "server scope control" "s c" #'sclang-scope-audio
        :desc "quit server" "q" #'sclang-server-quit
        :desc "reset server options" "o" #'sclang-reset-server-options)
-      (:prefix-map ("j" . "sclang")
+      (:prefix-map ("j" . "SuperCollider")
+       (:prefix ("l" . "sclang")
+       :desc "start sclang" "s" #'sclang-start
+       :desc "stop sclang" "q" #'sclang-stop
+       :desc "recompile library" "l" #'sclang-recompile
+       :desc "show post buffer" "p" #'sclang-show-post-buffer
+       :desc "clear post buffer" "c" #'sclang-clear-post-buffer
+       :desc "switch to workspace" "w" #'sclang-switch-to-workspace
+       )
+       (:prefix ("e" . "eval")
+       :desc "eval line" "l" #'sclang-eval-line
+       :desc "eval snippet" "." #'sclang-eval-current-snippet
+       )
+       (:prefix ("o" . "OSC")
+       :desc "start tracing" "s" #'sclang-osc-trace-on
+       :desc "quit tracing" "q" #'sclang-osc-trace-off
+       )
        (:prefix ("j" . "server")
-        ;;; TODO : replace org-journal-new-entry with real commands
        :desc "boot server" "b" #'sclang-server-boot
        :desc "start jack" "j" #'sclang-start-jack
        :desc "server meter" "m" #'sclang-meter
@@ -154,14 +169,6 @@
        )
        :desc "quit server" "q" #'sclang-server-quit
        :desc "reset server options" "o" #'sclang-reset-server-options)
-       :desc "switch to workspace" "w" #'sclang-switch-to-workspace
-       :desc "osc trace on" "t" #'sclang-osc-trace-on
-       :desc "osc trace off" "T" #'sclang-osc-trace-off
-       :desc "show post buffer" "p" #'sclang-show-post-buffer
-       :desc "clear post buffer" "c" #'sclang-clear-post-buffer
-       :desc "recompile library" "l" #'sclang-recompile
-       :desc "start sclang" "s" #'sclang-start
-       :desc "stop sclang" "q" #'sclang-stop
        ;; :desc "run server config scripts" "c" #'sclang-server-config
        :desc "browse builtin classes" "B" #'sclang-browse-definitions
        :desc "browse user extension classes" "E" #'sclang-extensions-gui)
