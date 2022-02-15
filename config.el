@@ -126,6 +126,7 @@
        ;; :desc "english ucs" "e" #'set-encoding-ucs)
        (:prefix-map ("v" . "various iani")
        :desc "projectile commander" "p" #'projectile-use-commander
+       :desc "evil mode" "e" #'evil-mode
        :desc "undo tree" "t" #'undo-tree-mode)
        (:prefix-map ("k" . "scsynth")
        :desc "boot server" "b" #'sclang-server-boot
