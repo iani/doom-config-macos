@@ -279,5 +279,28 @@
          (goto-char (line-end-position))
          (insert "\n//:*"))
         ))
+
+;; 22 Feb 2022 08:12 audio file commabds
+(defun sclang-dired-play-audiofile ()
+  "..."
+  (interactive)
+  )
+
+(defun sclang-dired-load-audiofile ()
+  "..."
+  (interactive)
+  )
+
+(defun sclang-dired-view-audiofile ()
+  "..."
+  (interactive)
+  )
+
+(defun sclang-dired-add-audiofile-to-project ()
+  "..."
+  (interactive)
+  )
+
+
 (provide 'SuperCollider-hydra-snippets)
 ;;; 020_SuperCollider-hydra-snippets.el ends here
