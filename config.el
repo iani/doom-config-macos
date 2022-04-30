@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name "Iannis Zannos"
+      user-mail-address "zannos@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -126,6 +126,7 @@
        ;; :desc "english ucs" "e" #'set-encoding-ucs)
        (:prefix-map ("v" . "various iani")
        :desc "projectile commander" "p" #'projectile-use-commander
+       :desc "projectile find dir" "d" #'projectile-find-dir
        :desc "evil mode" "e" #'evil-mode
        :desc "undo tree" "t" #'undo-tree-mode)
        (:prefix-map ("k" . "scsynth")

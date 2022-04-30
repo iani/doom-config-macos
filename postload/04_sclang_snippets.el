@@ -18,10 +18,12 @@
         (setq prefix "//:\n"))
       (setq sclang-snippet-is-routine nil)
       (setq sclang-snippet-is-loop nil)
+      (setq sclang-snippet-require-server nil)
       (goto-char snippet-begin)
       (setq snippet-head (buffer-substring-no-properties (point) (+ 4 (point))))
       (if (equal snippet-head "//:+") (setq sclang-snippet-is-routine t))
       (if (equal snippet-head "//:*") (setq sclang-snippet-is-loop t))
+      (if (equal snippet-head "//:!") (setq sclang-snippet-require-server t))
       (goto-char (line-end-position))
       (setq snippet-end (search-forward-regexp "^//:" nil t))
       (if snippet-end
@@ -114,6 +116,8 @@
          (snippet (sclang-get-current-snippet)))
     (if sclang-snippet-is-routine
         (setq snippet (format "{\n %s\n }.fork" snippet)))
+    (if sclang-snippet-require-server
+        (setq snippet (format "Server.default.waitForBoot({\n  %s \n})" snippet)))
     (if sclang-snippet-is-loop
         (setq snippet (format "{\n loop {\n %s \n} \n }.fork" snippet)))
     (sclang-eval-string
