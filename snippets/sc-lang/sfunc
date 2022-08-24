@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: sfunc
+# uuid:
+# key: trigger-key
+# condition: t
+# --
+{  } +> \

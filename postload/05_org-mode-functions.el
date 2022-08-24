@@ -1,8 +1,46 @@
 ;;; postload/05_org-mode-utils.el -*- lexical-binding: t; -*-
 ;; Mon Aug  9 13:03:57 2021
 
+(defun org-set-entered-date-active ()
+  "Set DATE_ENTERED property with active timestamp from user."
+  (interactive)
+  (org-set-property
+   "DATE-ENTERED"
+   (format-time-string (cdr org-time-stamp-formats) (org-read-date t t))))
+
+(defun org-set-started-date-active ()
+  "Set DATE_STARTED property with active timestamp from user."
+  (interactive)
+  (org-set-property
+   "DATE-STARTED"
+   (format-time-string (cdr org-time-stamp-formats) (org-read-date t t))))
+
+(defun org-set-entered-date-inactive ()
+  "Set DATE_ENTERED property with inactive timestamp from user."
+  (interactive)
+  (org-set-property
+   "DATE_ENTERED"
+   (concat
+           "["
+           (substring
+            (format-time-string (cdr org-time-stamp-formats) (org-read-date t t))
+            1 -1)
+           "]")))
+
+(defun org-set-started-date-inactive ()
+  "Set DATE_STARTED property with inactive timestamp from user."
+  (interactive)
+  (org-set-property
+   "DATE_STARTED"
+   (concat
+           "["
+           (substring
+            (format-time-string (cdr org-time-stamp-formats) (org-read-date t t))
+            1 -1)
+           "]")))
+
 (defun org-set-done-date ()
-  "Set DATE_DONE property with time from user. Inactive timestamp."
+  "Set DATE_DONE property with inactive timestamp from user."
   (interactive)
   (org-set-property
    "DATE_DONE"
@@ -14,7 +52,7 @@
            "]")))
 
 (defun org-set-date-from-user-active ()
-  "Set DATE_DONE property with time from user. "
+  "Set DATE property with active timestamp from user "
   (interactive)
   (org-set-property
    "DATE"

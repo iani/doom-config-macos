@@ -116,6 +116,10 @@
 
 (map! :leader
       :desc "org-mark-ring-goto" "m g o" #'org-mark-ring-goto
+      :desc "calendar" "o a s" #'org-set-started-date-active
+      :desc "calendar" "o a S" #'org-set-started-date-inactive
+      :desc "calendar" "o a e" #'org-set-entered-date-active
+      :desc "calendar" "o a E" #'org-set-entered-date-inactive
       :desc "calendar" "o c" #'calendar
       :desc "calendar" "o C" #'calc
       ; :desc "find folder in project" "p F" #'projectile-find-dir
