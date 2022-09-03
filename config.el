@@ -116,12 +116,14 @@
 
 (map! :leader
       :desc "org-mark-ring-goto" "m g o" #'org-mark-ring-goto
-      :desc "calendar" "o a s" #'org-set-started-date-active
-      :desc "calendar" "o a S" #'org-set-started-date-inactive
-      :desc "calendar" "o a e" #'org-set-entered-date-active
-      :desc "calendar" "o a E" #'org-set-entered-date-inactive
+      :desc "started date active" "o a s" #'org-set-started-date-active
+      :desc "started date inactive" "o a S" #'org-set-started-date-inactive
+      :desc "entered date active" "o a e" #'org-set-entered-date-active
+      :desc "entered date inactive" "o a E" #'org-set-entered-date-inactive
+      :desc "done date active" "o a d" #'org-set-entered-date-active
+      :desc "done date inactive" "o a D" #'org-set-entered-date-inactive
       :desc "calendar" "o c" #'calendar
-      :desc "calendar" "o C" #'calc
+      :desc "calc" "o C" #'calc
       ; :desc "find folder in project" "p F" #'projectile-find-dir
       :desc "org mark element" "o m" #'org-mark-element
       ;; (:prefix-map ("e" . "input encoding")
