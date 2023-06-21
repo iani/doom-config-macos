@@ -106,7 +106,7 @@
 
 (setq org-roam-directory "~/roam")
 (setq org-roam-graph-viewer "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
-(setq org-agenda-files '("~/org" "~/roam" "~/roam/daily"))
+(setq org-agenda-files '("~/org" "~/org/journal/" "~/roam" "~/roam/daily"))
 (setq org-agenda-include-diary t)
 (setq diary-file "~/roam/etc/diary")
 ;; (map!
@@ -116,12 +116,13 @@
 
 (map! :leader
       :desc "org-mark-ring-goto" "m g o" #'org-mark-ring-goto
+      :desc "org-cycle" "m g c" #'org-mark-ring-goto
       :desc "started date active" "o a s" #'org-set-started-date-active
       :desc "started date inactive" "o a S" #'org-set-started-date-inactive
       :desc "entered date active" "o a e" #'org-set-entered-date-active
       :desc "entered date inactive" "o a E" #'org-set-entered-date-inactive
-      :desc "done date active" "o a d" #'org-set-entered-date-active
-      :desc "done date inactive" "o a D" #'org-set-entered-date-inactive
+      :desc "done date active" "o a d" #'org-set-done-date-active
+      :desc "done date inactive" "o a D" #'org-set-done-date-inactive
       :desc "calendar" "o c" #'calendar
       :desc "calc" "o C" #'calc
       ; :desc "find folder in project" "p F" #'projectile-find-dir
@@ -155,7 +156,7 @@
        :desc "show post buffer" "p" #'sclang-show-post-buffer
        :desc "clear post buffer" "c" #'sclang-clear-post-buffer
        :desc "switch to workspace" "w" #'sclang-switch-to-workspace
-       )
+       :desc "duplicate current snippet" "d" #'sclang-duplicate-current-snippet)
        (:prefix ("e" . "eval")
        :desc "eval line" "l" #'sclang-eval-line
        :desc "eval snippet" "." #'sclang-eval-current-snippet

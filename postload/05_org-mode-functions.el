@@ -118,16 +118,16 @@
   (interactive "P")
   (if arg
       (insert (format-time-string "%y%m%d"))
-    (insert (format-time-string "%e %b %Y %H:%M"))))
+    (insert (format-time-string "%a %e %b %Y %H:%M"))))
 
 
-(defun org-insert-current-date (arg)
-  "Insert current date in format readable for org-capture minibuffer.
-        If called with ARG, use japanese/american military format YYMMDD."
-  (interactive "P")
-  (if arg
-      (insert (format-time-string "%y%m%d"))
-    (insert (format-time-string "%e %b %Y %H:%M"))))
+;; (defun org-insert-current-date (arg)
+;;   "Insert current date in format readable for org-capture minibuffer.
+;;         If called with ARG, use japanese/american military format YYMMDD."
+;;   (interactive "P")
+;;   (if arg
+;;       (insert (format-time-string "%y%m%d"))
+;;     (insert (format-time-string "%e %b %Y %H:%M"))))
 
         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; make heading movement commands skip initial * marks

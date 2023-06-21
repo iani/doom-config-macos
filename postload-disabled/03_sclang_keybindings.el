@@ -46,7 +46,10 @@
       (define-key sclang-mode-map (kbd "M-p") 'sclang-goto-previous-snippet)
       (define-key sclang-mode-map (kbd "M-N") 'sclang-eval-next-snippet)
       (define-key sclang-mode-map (kbd "M-P") 'sclang-eval-previous-snippet)
+      ;; Shadowed by evil-multiple cursors:
       (define-key sclang-mode-map (kbd "M-D") 'sclang-duplicate-current-snippet)
+      ;; alternative for M-D:
+      (define-key sclang-mode-map (kbd "M-J") 'sclang-duplicate-current-snippet)
       (define-key sclang-mode-map (kbd "M-C") 'sclang-copy-current-snippet)
       (define-key sclang-mode-map (kbd "M-R") 'sclang-region-select-current-snippet)
       (define-key sclang-mode-map (kbd "M-T") 'sclang-cut-current-snippet)

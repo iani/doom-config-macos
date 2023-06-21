@@ -3,6 +3,15 @@
 (require 'sclang)
 
 ; (add-hook 'sclang-mode-hook 'sclang-extensions-mode)
+(defun sclang-help ()
+  "Open sclang help gui."
+  (interactive)
+  (sclang-eval-string "Help.gui"))
+
+(defun sclang-startup ()
+  "Run thisProcess.startup"
+  (interactive)
+  (sclang-eval-string "thisProcess.platform.loadStartupFiles;"))
 
 ;; start jack
 (defun sclang-start-jack ()
