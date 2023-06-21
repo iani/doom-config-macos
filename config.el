@@ -151,6 +151,8 @@
       (:prefix-map ("j" . "SuperCollider")
        (:prefix ("l" . "sclang")
        :desc "start sclang" "s" #'sclang-start
+       :desc "sclang run startup" "u" #'sclang-startup
+       :desc "sclang open help" "h" #'sclang-help
        :desc "stop sclang" "q" #'sclang-stop
        :desc "recompile library" "l" #'sclang-recompile
        :desc "show post buffer" "p" #'sclang-show-post-buffer
