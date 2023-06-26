@@ -3,6 +3,29 @@
 (require 'sclang)
 
 ; (add-hook 'sclang-mode-hook 'sclang-extensions-mode)
+(defun sclang-time-separator ()
+  "Insert time separator string //:--[0]"
+  (interactive)
+  (forward-line)
+  (beginning-of-line)
+  (insert "//:--[0]
+"))
+
+(defun sclang-scope-audio ()
+  "Open scserver meter gui."
+  (interactive)
+  (sclang-eval-string "Server.default.scope;"))
+
+(defun sclang-scope-control ()
+  "Open scserver meter gui."
+  (interactive)
+  (sclang-eval-string "Server.default.scope(rate: 'control');"))
+
+(defun sclang-meter ()
+  "Open scserver meter gui."
+  (interactive)
+  (sclang-eval-string "Server.default.meter;"))
+
 (defun sclang-help ()
   "Open sclang help gui."
   (interactive)
