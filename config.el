@@ -158,8 +158,9 @@
        :desc "show post buffer" "p" #'sclang-show-post-buffer
        :desc "clear post buffer" "c" #'sclang-clear-post-buffer
        :desc "switch to workspace" "w" #'sclang-switch-to-workspace
-       :desc "duplicate current snippet" "d" #'sclang-duplicate-current-snippet)
        :desc "insert time snippet separator" "t" #'sclang-time-separator
+       :desc "Open score browser on current document" "b" #'sclang-browse-score
+       :desc "duplicate current snippet" "d" #'sclang-duplicate-current-snippet)
        (:prefix ("e" . "eval")
        :desc "eval line" "l" #'sclang-eval-line
        :desc "eval snippet" "." #'sclang-eval-current-snippet

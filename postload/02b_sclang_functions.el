@@ -11,6 +11,11 @@
   (insert "//:--[0]
 "))
 
+(defun sclang-browse-score ()
+  "Open OscData gui on current document."
+  (interactive)
+  (sclang-eval-string "OscDataFileList.openCurrentDocument;"))
+
 (defun sclang-scope-audio ()
   "Open scserver meter gui."
   (interactive)
