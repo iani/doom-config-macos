@@ -150,6 +150,7 @@
        :desc "reset server options" "o" #'sclang-reset-server-options)
       (:prefix-map ("j" . "SuperCollider")
        (:prefix ("l" . "sclang")
+       :desc "sclang cmd period" "." #'sclang-main-stop
        :desc "start sclang" "s" #'sclang-start
        :desc "sclang run startup" "u" #'sclang-startup
        :desc "sclang open help" "h" #'sclang-help
@@ -158,10 +159,23 @@
        :desc "show post buffer" "p" #'sclang-show-post-buffer
        :desc "clear post buffer" "c" #'sclang-clear-post-buffer
        :desc "switch to workspace" "w" #'sclang-switch-to-workspace
-       :desc "insert time snippet separator" "t" #'sclang-time-separator
-       :desc "Open score browser on current document" "b" #'sclang-browse-score
+       :desc "Open score browser on current document" "B" #'sclang-browse-score
+       :desc "Open Buffer gui" "b" #'sclang-buffer-gui
        :desc "duplicate current snippet" "d" #'sclang-duplicate-current-snippet)
-       (:prefix ("e" . "eval")
+       (:prefix ("s" . "sclang-snippets")
+        :desc "sclang copy snippet" "c" #'sclang-copy-current-snippet
+        :desc "sclang duplicate snippet" "d" #'sclang-duplicate-current-snippet
+        :desc "sclang cut snippet" "x" #'sclang-cut-current-snippet
+        :desc "sclang cut snippet" "u" #'sclang-cut-current-snippet
+        :desc "insert time snippet separator" "t" #'sclang-time-separator
+        :desc "sclang previous snippet" "p" #'sclang-goto-previous-snippet
+        :desc "sclang next snippet" "n" #'sclang-goto-next-snippet
+        :desc "sclang eval snippet" "e" #'sclang-eval-current-snippet
+        :desc "sclang eval snippet" "." #'sclang-eval-current-snippet
+        :desc "sclang forward snippet heading" "j" #'sclang-goto-next-heading
+        :desc "sclang backward snippet heading" "k" #'sclang-goto-previous-heading
+        )
+       (:prefix ("e" . "sclang-eval")
        :desc "eval line" "l" #'sclang-eval-line
        :desc "eval snippet" "." #'sclang-eval-current-snippet
        )
@@ -176,10 +190,8 @@
        :desc "server tree" "t" #'sclang-server-plot-tree
        :desc "record" "r" #'sclang-server-record
        :desc "stop recording" "R" #'sclang-server-stop-recording
-      ;; (:prefix ("s" . "scope")
        :desc "server scope audio" "a" #'sclang-scope-audio
        :desc "server scope control" "c" #'sclang-scope-control
-       ;; )
        :desc "quit server" "q" #'sclang-server-quit
        :desc "reset server options" "o" #'sclang-reset-server-options)
        ;; :desc "run server config scripts" "c" #'sclang-server-config

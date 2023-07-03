@@ -11,6 +11,11 @@
   (insert "//:--[0]
 "))
 
+(defun sclang-buffer-gui ()
+  "Open OscData gui on current document."
+  (interactive)
+  (sclang-eval-string "BufferGui.gui;"))
+
 (defun sclang-browse-score ()
   "Open OscData gui on current document."
   (interactive)
