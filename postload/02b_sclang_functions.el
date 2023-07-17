@@ -2,6 +2,17 @@
 
 (require 'sclang)
 
+(defun sclang-snippet-bufplay ()
+  "play current snippet with Bufplay play: ..."
+  (interactive)
+  (let ((snippet (sclang-get-current-snippet)))
+    (sclang-eval-string
+     (format "Bufplay play: \n%s\n" snippet))))
+
+(defun sclang-current-document-path ()
+  ""
+  (interactive)
+  (sclang-eval-string "Document.current.path.postln;"))
 ; (add-hook 'sclang-mode-hook 'sclang-extensions-mode)
 (defun sclang-time-separator ()
   "Insert time separator string //:--[0]"

@@ -10,6 +10,7 @@
       ;; (define-key sclang-mode-map (kbd "C-c C-p m") 'sclang-server-meter)
        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; sc-hacks gui commands:
+      (define-key sclang-mode-map (kbd "C-M .") 'sclang-snippet-bufplay)
       (define-key sclang-mode-map (kbd "C-h g s") 'sclang-startupfiles-gui)
       (define-key sclang-mode-map (kbd "C-h g a") 'sclang-audiofiles-gui)
       (define-key sclang-mode-map (kbd "C-h g p") 'sclang-players-gui)

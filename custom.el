@@ -60,7 +60,5 @@
     (cons 260 "#ff6c6b")
     (cons 280 "#cf6162")
     (cons 300 "#9f585a")
-    (cons 320 "#6f4e52")
-    (cons 340 "#5B6268")
     (cons 360 "#5B6268")))
  '(vc-annotate-very-old-color nil))
