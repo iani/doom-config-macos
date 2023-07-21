@@ -2,6 +2,10 @@
 
 (require 'sclang)
 
+(defun sclang-post-current-environment ()
+  "post currentEnvironment"
+  (interactive)
+  (sclang-eval-string "currentEnvironment.postln;"))
 (defun sclang-snippet-bufplay ()
   "play current snippet with Bufplay play: ..."
   (interactive)

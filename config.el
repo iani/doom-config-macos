@@ -150,6 +150,7 @@
        :desc "reset server options" "o" #'sclang-reset-server-options)
       (:prefix-map ("j" . "SuperCollider")
        (:prefix ("l" . "sclang")
+       :desc "sclang post currentEnvironment" "e" #'sclang-post-current-environment
        :desc "sclang cmd period" "." #'sclang-main-stop
        :desc "start sclang" "s" #'sclang-start
        :desc "sclang run startup" "u" #'sclang-startup
