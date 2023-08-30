@@ -1,6 +1,15 @@
 ;;; postload/01_sclang.el -*- lexical-binding: t; -*-
 
 (require 'sclang)
+(defun dired-open-soundfile-selections-script ()
+  "Open dired selected file with SfSelections"
+  (interactive)
+  (message (dired-get-file-for-visit))
+  (sclang-open-selections-file (dired-get-file-for-visit)))
+
+(defun sclang-open-selections-file (path)
+  (sclang-eval-string
+   (concat "\"" path "\".openSoundFileSelections")))
 
 (defun sclang-post-current-environment ()
   "post currentEnvironment"

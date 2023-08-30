@@ -120,6 +120,10 @@
       (insert (format-time-string "%y%m%d"))
     (insert (format-time-string "%a %e %b %Y %H:%M"))))
 
+(defun org-insert-current-time (arg)
+  "Insert current time in short format HH:MM"
+  (interactive "P")
+  (insert (format-time-string "%H:%M")))
 
 ;; (defun org-insert-current-date (arg)
 ;;   "Insert current date in format readable for org-capture minibuffer.
@@ -244,5 +248,6 @@
 ;; )
 
 (global-set-key (kbd "C-c C-x t") 'org-insert-current-date)
+(global-set-key (kbd "C-c C-x T") 'org-insert-current-time)
 (provide 'org_mode_utils_and_key_map)
 ;;; 029_org_mode_utils_and_key_map.el ends here
