@@ -150,6 +150,8 @@
        :desc "reset server options" "o" #'sclang-reset-server-options)
       (:prefix-map ("j" . "SuperCollider")
        (:prefix ("l" . "sclang")
+       :desc "sclang open script" "o" #'sclang-open-buffer-as-script
+       :desc "sclang open script" "O" #'sclang-open-buffer-as-preset
        :desc "sclang post currentEnvironment" "e" #'sclang-post-current-environment
        :desc "sclang cmd period" "." #'sclang-main-stop
        :desc "start sclang" "s" #'sclang-start
@@ -162,7 +164,8 @@
        :desc "switch to workspace" "w" #'sclang-switch-to-workspace
        :desc "Open score browser on current document" "B" #'sclang-browse-score
        :desc "Open Buffer gui" "b" #'sclang-buffer-gui
-       :desc "duplicate current snippet" "d" #'sclang-duplicate-current-snippet)
+       ;; :desc "duplicate current snippet" "d" #'sclang-duplicate-current-snippet
+       )
        (:prefix ("s" . "sclang-snippets")
         :desc "sclang copy snippet" "c" #'sclang-copy-current-snippet
         :desc "sclang duplicate snippet" "d" #'sclang-duplicate-current-snippet

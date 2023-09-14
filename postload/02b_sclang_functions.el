@@ -1,6 +1,29 @@
 ;;; postload/01_sclang.el -*- lexical-binding: t; -*-
 
 (require 'sclang)
+
+;; helper func for opening script on current buffer:
+(defun show-file-name ()
+  "Show the full path file name in the minibuffer."
+  (interactive)
+  (message (buffer-file-name))
+  (kill-new (file-truename buffer-file-name))
+  (file-truename buffer-file-name) ;; return path for further use.
+)
+(global-set-key "\C-cz" 'show-file-name)
+
+(defun sclang-open-buffer-as-script ()
+  "Open OscData gui on path of current buffer"
+  (interactive)
+  (sclang-eval-string
+   (format "OscData.fromPathGui(\"%s\".postln);" (file-truename buffer-file-name))))
+
+(defun sclang-open-buffer-as-preset ()
+  "Open OscData gui on path of current buffer"
+  (interactive)
+  (sclang-eval-string
+   (format "PresetList.fromPath(\"%s\".postln).gui;" (file-truename buffer-file-name))))
+
 (defun dired-open-soundfile-selections-script ()
   "Open dired selected file with SfSelections"
   (interactive)
