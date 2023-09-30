@@ -154,10 +154,10 @@
        :desc "sclang open script" "O" #'sclang-open-buffer-as-preset
        :desc "sclang post currentEnvironment" "e" #'sclang-post-current-environment
        :desc "sclang cmd period" "." #'sclang-main-stop
-       :desc "start sclang" "s" #'sclang-start
+       :desc "start sclang" "S" #'sclang-query-start
        :desc "sclang run startup" "u" #'sclang-startup
        :desc "sclang open help" "h" #'sclang-help
-       :desc "stop sclang" "q" #'sclang-stop
+       :desc "stop sclang" "q" #'sclang-query-stop
        :desc "recompile library" "l" #'sclang-recompile
        :desc "show post buffer" "p" #'sclang-show-post-buffer
        :desc "clear post buffer" "c" #'sclang-clear-post-buffer

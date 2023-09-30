@@ -2,6 +2,18 @@
 
 (require 'sclang)
 
+(defun sclang-query-start ()
+  "Start SuperCollider if user answers y."
+  (interactive)
+  (if (yes-or-no-p "Start sclang?")
+      (sclang-start)))
+
+(defun sclang-query-stop ()
+  "Stop SuperCollider if user answers y."
+  (interactive)
+  (if (yes-or-no-p "Stop sclang?")
+      (sclang-stop)))
+
 ;; helper func for opening script on current buffer:
 (defun show-file-name ()
   "Show the full path file name in the minibuffer."
