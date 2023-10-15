@@ -110,7 +110,7 @@
 
 (defun sclang-fill-mode-map (map)
   ;; process control
-  (define-key map "\C-c\C-l"		'sclang-recompile)
+  (define-key map "\C-c\C-l"		'sclang-query-recompile)
   (define-key map "\C-c\C-o"		'sclang-start)
   ;; post buffer control
   (define-key map "\C-c<"			'sclang-clear-post-buffer)

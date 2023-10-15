@@ -158,7 +158,7 @@
        :desc "sclang run startup" "u" #'sclang-startup
        :desc "sclang open help" "h" #'sclang-help
        :desc "stop sclang" "q" #'sclang-query-stop
-       :desc "recompile library" "l" #'sclang-recompile
+       :desc "recompile library" "L" #'sclang-query-recompile
        :desc "show post buffer" "p" #'sclang-show-post-buffer
        :desc "clear post buffer" "c" #'sclang-clear-post-buffer
        :desc "switch to workspace" "w" #'sclang-switch-to-workspace

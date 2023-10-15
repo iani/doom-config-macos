@@ -2,6 +2,12 @@
 
 (require 'sclang)
 
+(defun sclang-query-recompile ()
+  "Recompile SuperCollider sclang Library if user answers y."
+  (interactive)
+  (if (yes-or-no-p "Recompile sclang library?")
+      (sclang-recompile)))
+
 (defun sclang-query-start ()
   "Start SuperCollider if user answers y."
   (interactive)
